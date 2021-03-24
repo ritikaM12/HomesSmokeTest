@@ -21,4 +21,3 @@ Then enter username and password in the input fields and click login CTA
 Then user again click on save this search CTA
 Then Enter any name in saved search field click save search CTA
 Then Check notification for the save search
-

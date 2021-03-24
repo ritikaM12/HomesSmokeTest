@@ -37,9 +37,10 @@ public static WebDriver driver;
 	@Then("user search a location")
 	public void user_search_location() throws InterruptedException {
 		WebElement element= driver.findElement(By.xpath("//input[@data-testid='HP-SearchInput']"));
-		element.click();
-		element.sendKeys("Norfolk");
 		
+		element.click();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		element.sendKeys("Norfolk");
 	 driver.findElement(By.xpath("//*[@id=\"HP-Norfolk, VA__0\"]")).click();
 	}
 	
@@ -99,6 +100,5 @@ public static WebDriver driver;
 	@Then("Browser is closed")
 	public void Browser_closed() {
 		driver.quit();
-		
 	}
 }
